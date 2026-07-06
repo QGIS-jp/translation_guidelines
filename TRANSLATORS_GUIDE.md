@@ -1,10 +1,10 @@
-# Translator's Guide for QGIS Website
+# QGIS ウェッブサイト翻訳者用ガイド
 
-## ⚠️ Important: DO NOT Translate Technical Content
+## ⚠️ 重要: DO NOT Translate Technical Content
 
 When translating content for the QGIS website, please **DO NOT** translate the following technical elements:
 
-### 1. Hugo Shortcodes (Tags)
+### 1. Hugo ショートコード (Tags)
 
 Shortcodes are special markup that Hugo uses to generate website features. They are enclosed in `{{< >}}` or `{{% %}}`.
 
