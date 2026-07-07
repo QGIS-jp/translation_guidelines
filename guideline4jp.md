@@ -1,6 +1,6 @@
 # QGIS翻訳日本語ルール案
 
-
+2015年QGIS Hackfest Tokyoでの作業を参考に作成
 
 参考情報 Mozillaの翻訳スタイル: http://www.mozilla-japan.org/jp/l10n/guide.html Wordpress の翻訳/翻訳ガイドライン: http://wpdocs.sourceforge.jp/WordPress_%E3%81%AE%E7%BF%BB%E8%A8%B3/%E7%BF%BB%E8%A8%B3%E3%82%AC%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3
 
