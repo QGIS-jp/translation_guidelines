@@ -1,8 +1,8 @@
 # QGIS翻訳ガイドライン関連
 
-**QGIS 翻訳日本語ガイドライン**
+**QGIS 翻訳日本語ルール**
 
-- [QGIS日本語ガイドライン案](https://github.com/QGIS-jp/translation_guidelines/blob/main/guideline4jp.md) 日本語ガイドライン（検討中　意見や案を書き込んで下さい)
+- [QGIS日本語ルール案](https://github.com/QGIS-jp/translation_guidelines/blob/main/guideline4jp.md) 日本語ルール（検討中　意見や案を書き込んで下さい)
   
 **QGIS Desktop/Documentation 翻訳ガイドライン**
 
