@@ -1,13 +1,15 @@
 # QGIS翻訳日本語ルール案
 
-文体：ですます調 
-句読点： 、。 
+
 
 参考情報 Mozillaの翻訳スタイル: http://www.mozilla-japan.org/jp/l10n/guide.html Wordpress の翻訳/翻訳ガイドライン: http://wpdocs.sourceforge.jp/WordPress_%E3%81%AE%E7%BF%BB%E8%A8%B3/%E7%BF%BB%E8%A8%B3%E3%82%AC%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3
 
 ルール案 Mozillaのl10nガイドラインに準拠する http://www.mozilla-japan.org/jp/l10n/guide.html ＜主な内容＞ 文体と表現
 
+## ルール案
+
 文体は敬体(ですます調)で統一する。
+句読点： 、。 
 日本語が堅くならないよう必要以上の漢字は使用しない。
 固有名詞や専門用語あるいは慣例的なものを除き英語表記は使用しない。
 カタカナ語についても同様に、自然な日本語に可能な限り置き換える。 英数記号と全角半角
