@@ -95,108 +95,108 @@ Spanish:    QGIS |ltrversion|         (keep "QGIS" or translate if needed)
 
 重要なルール: **パイプ（|...|）で囲まれたテキストは変数名です。絶対に翻訳しないでください！**
 
-### 6. Inline HTML in Markdown
+### 6. Markdown内のインラインHTML
 
-Please do not add or modify inline HTML tags in markdown translation strings.
+Markdownの翻訳文字列において、インラインHTMLタグを追加または変更しないでください。
 
-If a string already contains HTML, keep tags exactly as they are and only translate human-readable text.
+文字列にすでにHTMLが含まれている場合は、タグはそのまま維持し、人間が読むテキストのみを翻訳してください。
 
-## What SHOULD Be Translated
+## 翻訳すべきもの
 
-Translate:
-- ✅ Regular text and paragraphs
-- ✅ Headings and titles
-- ✅ Button text (the `text` parameter value)
-- ✅ Alt text for images
-- ✅ Link text that appears to users
-- ✅ Descriptions and instructions
+翻訳する:
+- ✅ 通常のテキストと段落
+- ✅ 見出しとタイトル
+- ✅ ボタンのテキスト（`text` パラメーターの値）
+- ✅ 画像の代替テキスト
+- ✅ ユーザーに表示されるリンクテキスト
+- ✅ 説明と手順
 
-Do NOT translate/modify:
-- ❌ Shortcode names and shortcode syntax (`{{< ... >}}`)
-- ❌ Pipe variables (`|version|`, `|ltrversion|`, etc.)
-- ❌ URLs and file paths used for linking
-- ❌ Inline HTML tags (`<span>`, `<br/>`, `<div>`, etc.)
+翻訳/変更してはいけない:
+- ❌ ショートコード名とショートコードの構文 (`{{< ... >}}`)
+- ❌ パイプ変数（`|version|`、`|ltrversion|` など）
+- ❌ リンクに使用されるURLおよびファイルパス
+- ❌ インラインHTMLタグ（`<span>`、`<br/>`、`<div>`など）
 
-## Examples
+## 例
 
-### Example 1: User Groups Link
+### 例 1: User Groups Link
 
-**English Source:**
+**英語ソース:**
 ```markdown
 See [User Groups]({{< ref "community/groups.md" >}}) to read more.
 ```
 
-**✅ Correct Bulgarian Translation:**
+**✅ 正しい Bulgarian 翻訳:**
 ```markdown
 Вижте [Потребителски групи]({{< ref "community/groups.md" >}}) за да прочетете повече.
 ```
 
-Note: Only "User Groups" and "to read more" are translated. The file path stays in English.
+注："User Groups" と "to read more" のみ翻訳されています。ファイルパスは英語のままです。
 
-### Example 2: Button with Link
+### 例 2: Button with Link
 
-**English Source:**
+**英語ソース:**
 ```markdown
 {{< button class="is-primary1" link="community/groups" text="User groups 🇩🇪 🇫🇷 🇪🇸" >}}
 ```
 
-**✅ Correct Bulgarian Translation:**
+**✅ 正しい Bulgarian 翻訳:**
 ```markdown
 {{< button class="is-primary1" link="community/groups" text="Потребителски групи 🇩🇪 🇫🇷 🇪🇸" >}}
 ```
 
-Note: Only the `text` value is translated. Everything else (shortcode name, class, link path) remains in English.
+注: `text` の値のみが翻訳されます。それ以外（ショートコード名、クラス、リンクパス）は英語のままとなります。
 
-### Example 3: Image Gallery
+### 例 3: Image Gallery
 
-**English Source:**
+**英語ソース:**
 ```markdown
 {{< hub-images showcase="map" quantity="4" columns="gallery" >}}
 ```
 
-**✅ Correct Translation (ANY language):**
+**✅ 正しい翻訳 (任意の言語):**
 ```markdown
 {{< hub-images showcase="map" quantity="4" columns="gallery" >}}
 ```
 
-Note: This entire shortcode stays the same in ALL languages - nothing should be translated!
+注：このショートコード全体は、すべての言語において変更されません。翻訳しないでください。
 
-### Example 4: Tab Labels with Hugo Variables
+### 例 4: Tab Labels with Hugo Variables
 
-**English Source:**
+**英語ソース:**
 ```markdown
 {{<tabs tab1="QGIS |ltrversion|" tab2="QGIS testing (>|version|)" tab3="Archived releases" >}}
 ```
 
-**✅ Correct Bulgarian Translation:**
+**✅ 正しい Bulgarian 翻訳:**
 ```markdown
 {{<tabs tab1="QGIS |ltrversion|" tab2="QGIS тестване (>|version|)" tab3="Архивирани издания" >}}
 ```
 
-**❌ WRONG Bulgarian Translation:**
+**❌ 間違った Bulgarian 翻訳:**
 ```markdown
 {{<tabs tab1="QGIS |алтернативна версия|" tab2="QGIS тестване (>|версия|)" tab3="Архивирани издания" >}}
 ```
 
-Note: You can translate "QGIS testing" → "QGIS тестване" and "Archived releases" → "Архивирани издания", but the pipe-delimited variables (`|ltrversion|`, `|version|`) must stay exactly as they are!
+注："QGIS testing" を "QGIS тестване"、"Archived releases" を "Архивирани издания" と翻訳することは可能ですが、パイプで区切られた変数（`|ltrversion|`、`|version|`）は、そのまま変更せずに残す必要があります。
 
-## Why This Matters
+## これが重要な理由
 
-When technical content gets translated:
-- 🚫 The website build fails
-- 🚫 Links stop working
-- 🚫 Images don't display
-- 🚫 Layout breaks
+技術的なコンテンツが翻訳されると:
+- 🚫 ウェブサイトのビルドが失敗します
+- 🚫 リンクが機能しなくなる
+- 🚫 画像が表示されません
+- 🚫 レイアウト崩れ
 
-Our automated system will fix some of these issues, but it's better to avoid them in the first place!
+我々の自動システムがこうした問題の一部を修正しますが、そもそも発生させないようにするのが最善です。
 
-## Questions?
+## 質問?
 
-If you're unsure whether something should be translated:
-- **If it looks like code or a file path** → Don't translate it
-- **If it's inside `{{< >}}` brackets** → Usually don't translate it (except `text` and similar display values)
-- **If users will see it on the website** → Translate it
+何かを翻訳すべきかどうか迷っている場合:
+- **コードやファイルパスのように見える場合** → 翻訳しないでください
+- **`{{< >}}` 括弧内にある場合** → 通常は翻訳しません（`text` やそれに類する表示用値は除く）。
+- **ユーザーがウェブサイト上で目にする場合** → 翻訳してください
 
-When in doubt, ask the translation coordinators or check the English source to see what's meant for display vs. technical markup.
+判断に迷う場合は、翻訳コーディネーターに尋ねるか、英語の原文を確認して、何が表示用で何が技術的なマークアップなのかを確かめてください。
 
-Thank you for helping make QGIS accessible to speakers of your language! 🌍
+QGISをあなたの言語の話し手にとって利用しやすいものにするためのご協力、ありがとうございます！ 🌍
