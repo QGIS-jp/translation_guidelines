@@ -1,99 +1,99 @@
 # QGIS ウェッブサイト翻訳者用ガイド
 
-## ⚠️ 重要: DO NOT Translate Technical Content
+## ⚠️ 重要: 技術コンテンツは翻訳しないで下さい
 
-When translating content for the QGIS website, please **DO NOT** translate the following technical elements:
+QGISウェブサイトのコンテンツを翻訳する際は、以下の技術的な要素を翻訳 **しないで** ください。:
 
 ### 1. Hugo ショートコード (Tags)
 
-Shortcodes are special markup that Hugo uses to generate website features. They are enclosed in `{{< >}}` or `{{% %}}`.
+ショートコードは、Hugoがウェブサイトの機能を生成するために使用する特別なマークアップです。これらは `{{< >}}` または `{{% %}}` で囲まれます。
 
-**❌ WRONG:**
+**❌ 間違い:**
 ```markdown
 {{< край на колоната >}}  <!-- Bulgarian translation of "column-end" -->
 {{< fin de colonne >}}     <!-- French translation of "column-end" -->
 ```
 
-**✅ CORRECT:**
+**✅ 正解:**
 ```markdown
 {{< column-end >}}        <!-- Always keep in English -->
 ```
 
-### 2. File Paths in Links
+### 2.リンク内のファイルパス
 
-File paths inside `ref` shortcodes must remain in English:
+`ref` ショートコード内のファイルパスは、英語のままにする必要があります。:
 
-**❌ WRONG:**
+**❌ 間違い:**
 ```markdown
 {{< ref "общност/групи.md" >}}        <!-- Translated path -->
 {{< ref "communauté/groupes.md" >}}   <!-- Translated path -->
 ```
 
-**✅ CORRECT:**
+**✅ 正解:**
 ```markdown
 {{< ref "community/groups.md" >}}     <!-- Always keep in English -->
 ```
 
-### 3. Shortcode Parameter Values
+### 3. ショートコードのパラメータ値
 
-Technical parameter values must remain in English:
+技術パラメータの値は英語のままにする必要があります。:
 
-**❌ WRONG:**
+**❌ 間違い:**
 ```markdown
 {{< hub-images showcase="карта" columns="галерия" >}}
 {{< column-start class="заоблена" >}}
 ```
 
-**✅ CORRECT:**
+**✅ 正解:**
 ```markdown
 {{< hub-images showcase="map" columns="gallery" >}}
 {{< column-start class="rounded" >}}
 ```
 
-### 4. URL Segments and Links
+### 4. URLセグメントとリンク
 
-When you see URL paths or technical identifiers, keep them in English:
+URLパスや技術的な識別子を見つけた場合は、英語のままにしてください。:
 
-**❌ WRONG:**
+**❌ 間違い:**
 ```markdown
 {{< button link="общност/групи" text="Потребителски групи" >}}
 ```
 
-**✅ CORRECT:**
+**✅ 正解:**
 ```markdown
 {{< button link="community/groups" text="Потребителски групи" >}}
 ```
 
-Only translate the `text` parameter!
+`text` パラメータのみを翻訳してください！
 
-### 5. Hugo Template Variables
+### 5. Hugoのテンプレート変数
 
-Hugo uses pipe notation `|variable|` for dynamic content like version numbers. These variable names must NEVER be translated:
+Hugoでは、バージョン番号などの動的なコンテンツに `|variable|` というパイプ記法が使用されます。これらの変数名は、 **決して** 翻訳してはなりません。
 
-**❌ WRONG:**
+**❌ 間違い:**
 ```markdown
 QGIS |алтернативна версія|      <!-- Ukrainian: "alternative version" -->
 QGIS |versión ltr|              <!-- Spanish variation -->
 ```
 
-**✅ CORRECT:**
+**✅ 正解:**
 ```markdown
 QGIS |ltrversion|               <!-- Variable name stays in English -->
 ```
 
-Common Hugo variables you'll see:
-- `|version|` - Current QGIS version
-- `|ltrversion|` - Long-term release version
-- `|nextversion|` - Next upcoming version
+よく目にするHugoの変数：
+- `|version|` - 現在のQGISバージョン
+- `|ltrversion|` - 長期リリース版
+- `|nextversion|` - 次期バージョン
 
-**✅ You CAN translate the text AROUND these variables:**
+**✅ これらの変数の「周囲」にあるテキストは翻訳可能です:**
 ```markdown
 English:    QGIS |ltrversion|
 Bulgarian:  QGIS |ltrversion|         (keep "QGIS" or translate if needed)
 Spanish:    QGIS |ltrversion|         (keep "QGIS" or translate if needed)
 ```
 
-The key rule: **Text between pipes (|...|) is a variable name - never translate it!**
+重要なルール: **パイプ（|...|）で囲まれたテキストは変数名です。絶対に翻訳しないでください！**
 
 ### 6. Inline HTML in Markdown
 
