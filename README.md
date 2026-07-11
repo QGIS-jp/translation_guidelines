@@ -2,7 +2,7 @@
 
 **QGIS 翻訳日本語ルール**
 
-- [QGIS日本語ルール案](https://github.com/QGIS-jp/translation_guidelines/blob/main/guideline4jp.md) 日本語ルール（検討中　意見や新案を文書に書き込むかこのリポジトリのissuesに投稿して下さい)
+- [QGIS日本語ルール案](https://github.com/QGIS-jp/translation_guidelines/blob/main/guideline4jp.md) 日本語ルール（検討中　改善意見や新案を文書に書き込むかこのリポジトリのissuesに投稿して下さい)
   
 **QGIS Desktop/Documentation 翻訳ガイドライン**
 
